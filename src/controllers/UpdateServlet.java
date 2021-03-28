@@ -37,7 +37,7 @@ public class UpdateServlet extends HttpServlet {
 
             //セッションスコープのIDを取得
             //データ1件を取得
-            Task t = em.find(Task.class, (Integer)(request.getAttribute("task_id")));
+            Task t = em.find(Task.class, (Integer)(request.getSession().getAttribute("task_id")));
 
             //上書き
             String content = request.getParameter("content");
