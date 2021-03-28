@@ -32,7 +32,6 @@ public class NewServlet extends HttpServlet {
         //CSRF
         request.setAttribute("_token", request.getSession().getId());
 
-        //インスタンス生成
         request.setAttribute("task", new Task());
 
         RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/tasks/new.jsp");
